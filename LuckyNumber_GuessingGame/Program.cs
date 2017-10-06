@@ -29,16 +29,18 @@ namespace LuckyNumber_GuessingGame
             for (int i = 0; i < usrGuess.Length; i++)
             {
                 usrGuess[i] = int.Parse(Console.ReadLine());
-                if (usrGuess[i] < startingNumber || usrGuess[i] > endingNumber)
                 {
-                    Console.WriteLine("Please enter a valid number");
+                    if (usrGuess[i] < startingNumber || usrGuess[i] > endingNumber)
+                    {
+                        Console.WriteLine("Please enter a valid number");
+                    }
                 }
-            }
-                
-                  
-                
+                }
 
-            
+
+
+
+             
         }
     }
 }
