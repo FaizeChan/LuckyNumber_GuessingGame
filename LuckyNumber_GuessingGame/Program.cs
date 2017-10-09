@@ -68,7 +68,7 @@ namespace LuckyNumber_GuessingGame
                     }
                     else if(usrGuess.Contains(pcNumber[i] -1))
                     {
-                        Console.WriteLine("You got 5 out of 6 correct, You get" );
+                        Console.WriteLine("You got 5 out of 6 correct, You get");
                     }
                 }
 
