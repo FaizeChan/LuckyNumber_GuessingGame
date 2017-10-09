@@ -45,8 +45,7 @@ namespace LuckyNumber_GuessingGame
                         }
                     }
                 }
-                // Just hardcoding the reward for part 3 here.
-                int Jackpot = 250000;
+                
 
                     //Going to have the computer radomize and pick a number between the starting and ending number.
 
@@ -57,8 +56,21 @@ namespace LuckyNumber_GuessingGame
                         int randomNumber = rand.Next(startingNumber, endingNumber) + 1;
                         pcNumber[j] = randomNumber;
                         Console.WriteLine("Lucky Number: " + pcNumber[j]);
+                    }
+                // Just hardcoding the reward for part 3 here.
+                int Jackpot = 250000;
+                for (int i = 0; i < 6; i++)
+                {
+                    if (usrGuess.Contains(pcNumber[i]))
+                    {
+                        Console.WriteLine("You win the Jackpot! You get $" + Jackpot);
+                        break;                       
+                    }
+                    else if(usrGuess.Contains(pcNumber[i] -1))
+                    {
+                        Console.WriteLine("You got 5 out of 6 correct, You get" );
+                    }
                 }
-                
 
 
 
@@ -66,8 +78,7 @@ namespace LuckyNumber_GuessingGame
 
 
 
-
-                Console.WriteLine("Do you want to play again? (Yes/No)");
+                        Console.WriteLine("Do you want to play again? (Yes/No)");
                 playAgain = Console.ReadLine().ToLower();
             } while (playAgain == "yes");
         }
